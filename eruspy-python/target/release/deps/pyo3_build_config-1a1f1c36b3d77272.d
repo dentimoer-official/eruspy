@@ -1,0 +1,14 @@
+/Users/mymin/projects/eruspy/eruspy-python/target/release/deps/pyo3_build_config-1a1f1c36b3d77272.d: /Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/lib.rs /Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/errors.rs /Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/impl_.rs /Users/mymin/projects/eruspy/eruspy-python/target/release/build/pyo3-build-config-1907cbf5d5aa3dc2/out/pyo3-build-config-file.txt /Users/mymin/projects/eruspy/eruspy-python/target/release/build/pyo3-build-config-1907cbf5d5aa3dc2/out/pyo3-build-config.txt
+
+/Users/mymin/projects/eruspy/eruspy-python/target/release/deps/libpyo3_build_config-1a1f1c36b3d77272.rlib: /Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/lib.rs /Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/errors.rs /Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/impl_.rs /Users/mymin/projects/eruspy/eruspy-python/target/release/build/pyo3-build-config-1907cbf5d5aa3dc2/out/pyo3-build-config-file.txt /Users/mymin/projects/eruspy/eruspy-python/target/release/build/pyo3-build-config-1907cbf5d5aa3dc2/out/pyo3-build-config.txt
+
+/Users/mymin/projects/eruspy/eruspy-python/target/release/deps/libpyo3_build_config-1a1f1c36b3d77272.rmeta: /Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/lib.rs /Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/errors.rs /Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/impl_.rs /Users/mymin/projects/eruspy/eruspy-python/target/release/build/pyo3-build-config-1907cbf5d5aa3dc2/out/pyo3-build-config-file.txt /Users/mymin/projects/eruspy/eruspy-python/target/release/build/pyo3-build-config-1907cbf5d5aa3dc2/out/pyo3-build-config.txt
+
+/Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/lib.rs:
+/Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/errors.rs:
+/Users/mymin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.28.3/src/impl_.rs:
+/Users/mymin/projects/eruspy/eruspy-python/target/release/build/pyo3-build-config-1907cbf5d5aa3dc2/out/pyo3-build-config-file.txt:
+/Users/mymin/projects/eruspy/eruspy-python/target/release/build/pyo3-build-config-1907cbf5d5aa3dc2/out/pyo3-build-config.txt:
+
+# env-dep:CARGO_PKG_VERSION=0.28.3
+# env-dep:OUT_DIR=/Users/mymin/projects/eruspy/eruspy-python/target/release/build/pyo3-build-config-1907cbf5d5aa3dc2/out
