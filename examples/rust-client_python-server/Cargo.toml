@@ -1,0 +1,15 @@
+[workspace] # isolated from the parent eruspy workspace
+
+[package]
+name    = "example-rust-client"
+version = "0.1.0"
+edition = "2021"
+
+# cargo run --bin client
+
+[[bin]]
+name = "client"
+path = "src/bin/client.rs"
+
+[dependencies]
+eruspy = { path = "../..", features = ["client"] }

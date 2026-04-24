@@ -1,0 +1,15 @@
+[package]
+name    = "eruspy-python"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "eruspy"          # Python import name: import eruspy
+crate-type = ["cdylib"]
+
+[dependencies]
+# eruspy with both features forced on — the Python package exposes everything
+eruspy    = { path = "..", features = ["server", "client"] }
+pyo3      = { version = "0.28.3", features = ["extension-module"] }
+tokio     = { version = "1", features = ["rt-multi-thread"] }
+actix-web = "4.13.0"

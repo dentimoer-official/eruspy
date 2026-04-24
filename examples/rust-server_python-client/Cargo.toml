@@ -1,0 +1,16 @@
+[workspace] # isolated from the parent eruspy workspace
+
+[package]
+name    = "example-rust-server"
+version = "0.1.0"
+edition = "2021"
+
+# cargo run --bin server
+
+[[bin]]
+name = "server"
+path = "src/bin/server.rs"
+
+[dependencies]
+eruspy    = { path = "../..", features = ["server"] }
+actix-web = "4.13.0"
