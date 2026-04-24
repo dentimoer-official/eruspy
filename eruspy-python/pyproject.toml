@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name            = "eruspy"
-version         = "0.1.7"
+version         = "0.1.8"
 description     = "File and directory transfer over HTTP — Rust speed, Python convenience"
 readme          = "README.md"
 license         = { text = "MIT OR Apache-2.0" }
@@ -27,4 +27,4 @@ classifiers     = [
 
 [tool.maturin]
 module-name = "eruspy"
-features    = ["pyo3/extension-module"]
+features    = ["pyo3/extension-module", "pyo3/abi3-py38"]

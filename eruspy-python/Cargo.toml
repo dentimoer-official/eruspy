@@ -1,6 +1,6 @@
 [package]
 name    = "eruspy-python"
-version = "0.1.7"
+version = "0.1.8"
 edition = "2021"
 
 [lib]
@@ -10,6 +10,6 @@ crate-type = ["cdylib"]
 [dependencies]
 # eruspy with both features forced on — the Python package exposes everything
 eruspy    = { path = "..", features = ["server", "client"] }
-pyo3      = { version = "0.28.3", features = ["extension-module"] }
+pyo3      = { version = "0.28.3", features = ["extension-module", "abi3-py38"] }
 tokio     = { version = "1", features = ["rt-multi-thread"] }
 actix-web = "4.13.0"
