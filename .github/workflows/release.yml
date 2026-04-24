@@ -19,13 +19,14 @@ jobs:
       - uses: PyO3/maturin-action@v1
         with:
           command: build
-          args: --release --out dist --manifest-path eruspy-python/Cargo.toml
+          args: --release --out dist
           manylinux: auto
+          working-directory: eruspy-python
 
       - uses: actions/upload-artifact@v4
         with:
           name: wheels-${{ matrix.os }}
-          path: dist
+          path: eruspy-python/dist
 
   upload:
     name: Upload to PyPI
@@ -38,6 +39,6 @@ jobs:
           merge-multiple: true
           path: dist
 
-      - uses: PyPA/gh-action-pypi-publish@release/v1
+      - uses: pypa/gh-action-pypi-publish@release/v1
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
