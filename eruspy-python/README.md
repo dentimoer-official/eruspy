@@ -25,8 +25,8 @@ c.download("file.txt", "./received.txt")
 c.upload_dir("./my_folder", "my_folder")
 c.download_dir("my_folder", "./restored")
 
-# List a directory
-entries = c.list("")           # "" = storage root
+# List a directory ("" = storage root)
+entries = c.list("")
 for e in entries:
     kind = "DIR" if e.is_dir else "FILE"
     print(f"[{kind}] {e.name}  ({e.size} bytes)")
@@ -34,27 +34,22 @@ for e in entries:
 
 ### Server
 
-`run_server` blocks the calling thread. Use `threading.Thread` to run it in the background:
+`run_server` spawns a background Rust thread and **returns immediately**.
+The server keeps the process alive until it exits.
 
 ```python
-import threading
-import eruspy
+import eruspy, time
 
-t = threading.Thread(
-    target=eruspy.run_server,
-    args=("./storage", True, "0.0.0.0:3000"),
-    #      root dir    ^     ^
-    #      allow_list ─┘     └─ bind address
-    daemon=True,
-)
-t.start()
-```
-
-Or run it directly (blocks until Ctrl+C):
-
-```python
-import eruspy
 eruspy.run_server("./storage", True, "0.0.0.0:3000")
+#                  root dir    ^     ^
+#                  allow_list ─┘     └─ bind address
+
+print("Server running. Press Ctrl+C to stop.")
+try:
+    while True:
+        time.sleep(1)
+except KeyboardInterrupt:
+    pass
 ```
 
 ## API Reference
@@ -79,9 +74,11 @@ eruspy.run_server("./storage", True, "0.0.0.0:3000")
 
 ### `run_server(storage, allow_list, host)`
 
+Starts the server in a background Rust thread. Returns immediately.
+
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `storage` | `str` | Root directory for stored files |
+| `storage` | `str` | Root directory for stored files (auto-created) |
 | `allow_list` | `bool` | Allow clients to call the `/list` endpoint |
 | `host` | `str` | Bind address, e.g. `"0.0.0.0:3000"` |
 
